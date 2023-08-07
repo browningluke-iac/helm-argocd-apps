@@ -6,3 +6,24 @@ apps:
     repo:
       url: https://github.com/browningluke-iac/helm-argocd-apps.git
       path: charts/argocd-apps
+  - name: libreddit
+    namespace: prd
+    valueFiles:
+      - values_sol-k8s.yaml
+    repo:
+      url: https://github.com/browningluke-iac/helm-apps.git 
+      path: charts/libreddit
+  - name: audiobookshelf
+    namespace: prd
+    valueFiles:
+      - values_sol-k8s.yaml
+    repo:
+      url: https://github.com/browningluke-iac/helm-apps.git 
+      path: charts/audiobookshelf
+  - name: komga
+    namespace: prd
+    valueFiles:
+      - values_sol-k8s.yaml
+    repo:
+      url: https://github.com/browningluke-iac/helm-apps.git 
+      path: charts/komga
