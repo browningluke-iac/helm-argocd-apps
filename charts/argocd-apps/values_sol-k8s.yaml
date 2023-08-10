@@ -27,3 +27,10 @@ apps:
     repo:
       url: https://github.com/browningluke-iac/helm-apps.git 
       path: charts/komga
+  - name: plex
+    namespace: prd
+    valueFiles:
+      - values_sol-k8s.yaml
+    repo:
+      url: https://github.com/browningluke-iac/helm-apps.git 
+      path: charts/plex
