@@ -34,3 +34,10 @@ apps:
     repo:
       url: https://github.com/browningluke-iac/helm-apps.git 
       path: charts/plex
+  - name: mangathr
+    namespace: mangathr
+    valueFiles:
+      - values_sol-k8s.yaml
+    repo:
+      url: https://github.com/browningluke-iac/helm-apps.git 
+      path: charts/mangathr
