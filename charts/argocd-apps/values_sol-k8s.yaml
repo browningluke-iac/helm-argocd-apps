@@ -6,6 +6,8 @@ apps:
     repo:
       url: https://github.com/browningluke-iac/helm-argocd-apps.git
       path: charts/argocd-apps
+
+# User-facing apps
   - name: libreddit
     namespace: prd
     valueFiles:
@@ -41,3 +43,12 @@ apps:
     repo:
       url: https://github.com/browningluke-iac/helm-apps.git 
       path: charts/mangathr
+
+# Cluster apps
+  - name: datadog
+    namespace: kube-system
+    valueFiles:
+      - values_sol-k8s.yaml
+    repo:
+      url: https://github.com/browningluke-iac/helm-cluster.git 
+      path: charts/datadog
