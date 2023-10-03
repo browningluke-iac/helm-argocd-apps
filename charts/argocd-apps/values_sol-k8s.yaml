@@ -59,13 +59,20 @@ apps:
     repo:
       url: https://github.com/browningluke-iac/helm-cluster.git 
       path: charts/k8s-dashboard
-  - name: metallb
+  - name: metallb-sys
     namespace: metallb-system
     valueFiles:
       - values_sol-k8s.yaml
     repo:
       url: https://github.com/browningluke-iac/helm-cluster.git 
-      path: charts/metallb
+      path: charts/metallb-sys
+  - name: metallb-conf
+    namespace: metallb-system
+    valueFiles:
+      - values_sol-k8s.yaml
+    repo:
+      url: https://github.com/browningluke-iac/helm-cluster.git 
+      path: charts/metallb-conf
   - name: cert-manager
     namespace: cert-manager
     valueFiles:
