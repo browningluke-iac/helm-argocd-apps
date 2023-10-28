@@ -43,6 +43,13 @@ apps:
     repo:
       url: https://github.com/browningluke-iac/helm-apps.git 
       path: charts/mangathr
+  - name: excalidraw
+    namespace: prd
+    valueFiles:
+      - values_sol-k8s.yaml
+    repo:
+      url: https://github.com/browningluke-iac/helm-apps.git
+      path: charts/excalidraw
 
 # Cluster apps
   - name: datadog
