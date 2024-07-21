@@ -94,3 +94,12 @@ apps:
     repo:
       url: https://github.com/browningluke-iac/helm-cluster.git 
       path: charts/cert-manager
+
+
+  - name: vault
+    namespace: vault
+    valueFiles:
+      - values_sol-k8s.yaml
+    repo:
+      url: https://github.com/browningluke-iac/helm-vault.git
+      path: .
