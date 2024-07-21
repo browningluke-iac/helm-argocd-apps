@@ -58,6 +58,14 @@ apps:
       url: https://github.com/browningluke-iac/helm-apps.git
       path: charts/rimgo
 
+  - name: tfc-agent
+    namespace: prd
+    valueFiles:
+      - values_sol-k8s.yaml
+    repo:
+      url: https://github.com/browningluke-iac/helm-apps.git
+      path: charts/tfc-agent
+
 # Cluster apps
   - name: datadog
     namespace: kube-system
