@@ -94,7 +94,13 @@ apps:
     repo:
       url: https://github.com/browningluke-iac/helm-cluster.git 
       path: charts/cert-manager
-
+  - name: rancher-local-path
+    namespace: default # doesn't matter, since resources are not namespaced
+    valueFiles:
+      - values_sol-k8s.yaml
+    repo:
+      url: https://github.com/browningluke-iac/helm-cluster.git 
+      path: charts/rancher-local-path
 
   - name: vault
     namespace: vault
