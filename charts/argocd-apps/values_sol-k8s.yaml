@@ -65,6 +65,14 @@ apps:
       url: https://github.com/browningluke-iac/helm-apps.git
       path: charts/your-spotify
 
+  - name: n8n
+    namespace: prd
+    valueFiles:
+      - values_sol-k8s.yaml
+    repo:
+      url: https://github.com/browningluke-iac/helm-apps.git
+      path: charts/n8n
+
   - name: tfc-agent
     namespace: prd
     valueFiles:
